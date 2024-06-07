@@ -1,6 +1,12 @@
 #!/bin/bash
 
-url="http://localhost:8000/api/v1/masjid-bilal-liege-4000-belgium/prayer-times"
+if [ -z "$1" ]; then
+  echo "Usage: $0 <mosque-name>"
+  exit 1
+fi
+
+mosque=$1
+url="http://localhost:8000/api/v1/${mosque}/prayer-times"
 response=$(curl -s -X GET "$url")
 
 # Parser le JSON avec jq pour obtenir les horaires de prière
