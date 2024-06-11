@@ -12,6 +12,10 @@ if [ -z "$1" ]; then
 	exit 1
 fi
 
+curl="path/to/curl"
+jq="/path/to/curl"
+
+
 mosque=$1
 url="http://localhost:8000/api/v1/${mosque}/prayer-times"
 response=$(curl -s -X GET "$url")

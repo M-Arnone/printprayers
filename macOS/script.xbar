@@ -1,0 +1,7 @@
+#!/bin/bash
+
+SCRIPT_PATH="path/to/printprayer.sh"
+
+ARGUMENT="..."
+
+$SCRIPT_PATH $ARGUMENT
